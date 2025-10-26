@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-purple: #8B5CF6;
+    --dark-purple: #6D28D9;
+    --light-purple: #C4B5FD;
+    --pale-purple: #EDE9FE;
+    --deep-purple: #5B21B6;
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #9D50BB 0%, #6E48AA 100%);
+    --gradient-3: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--gradient-1);
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: var(--pale-purple);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                     0 0 10px rgba(196, 181, 253, 0.5);
+    }
+    to {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                     0 0 20px rgba(196, 181, 253, 0.8),
+                     0 0 30px rgba(196, 181, 253, 0.6);
+    }
+}
+
+.divider {
+    width: 150px;
+    height: 3px;
+    background: var(--gradient-3);
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Names Section */
+.names-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(109, 40, 217, 0.3);
+}
+
+.bride-name,
+.groom-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--pale-purple);
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: var(--light-purple);
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.date-info {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(196, 181, 253, 0.3);
+}
+
+.date {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--light-purple);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.location {
+    font-size: 1.5rem;
+    color: var(--pale-purple);
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Video Section */
+.video-section {
+    margin: 40px 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(91, 33, 182, 0.5);
+}
+
+#weddingVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+                rgba(91, 33, 182, 0.3) 0%, 
+                rgba(109, 40, 217, 0.5) 50%, 
+                rgba(91, 33, 182, 0.3) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.video-text {
+    text-align: center;
+    padding: 20px;
+    background: rgba(91, 33, 182, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 2px solid rgba(196, 181, 253, 0.5);
+    animation: fadeInScale 1s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.video-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.video-date {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--pale-purple);
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.video-location {
+    font-size: 1.1rem;
+    color: var(--light-purple);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Message Section */
+.message-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.message {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--pale-purple);
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-style: italic;
+}
+
+.heart-icon {
+    font-size: 3rem;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.15);
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--light-purple);
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.credit {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--pale-purple);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .bride-name,
+    .groom-name {
+        font-size: 2.5rem;
+    }
+    
+    .ampersand {
+        font-size: 3rem;
+    }
+    
+    .date {
+        font-size: 1.4rem;
+    }
+    
+    .location {
+        font-size: 1.2rem;
+    }
+    
+    .video-names {
+        font-size: 1.8rem;
+    }
+    
+    .video-date {
+        font-size: 1rem;
+    }
+    
+    .video-location {
+        font-size: 0.9rem;
+    }
+    
+    .message {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .bride-name,
+    .groom-name {
+        font-size: 2rem;
+    }
+    
+    .ampersand {
+        font-size: 2.5rem;
+    }
+    
+    .video-names {
+        font-size: 1.5rem;
+    }
+    
+    .video-text {
+        padding: 15px;
+    }
+}
